@@ -1,0 +1,102 @@
+.upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial sans-serif;
+}
+
+.upload-title {
+    margin-top: 0;
+    color: #333;
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 120px;
+    max-width: calc(100% - 10px);
+    padding: 2px 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    margin: 5px 5px;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* 关键：允许子元素溢出隐藏 */
+}
+
+.file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #333;
+    min-width: 0;
+}
+
+.file-size {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.file-remove {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+
+.upload-error {
+    color: #f44336;
+    margin: 10px 0;
+    min-height: 20px;
+}
+
+.upload-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.upload-button {
+    padding: 2px 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
