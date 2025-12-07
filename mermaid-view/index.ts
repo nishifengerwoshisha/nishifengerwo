@@ -3,9 +3,9 @@ import { defineTool } from '../tool';
 import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.meraid-view.title'),
-  path: '/meraid-view',
-  description: translate('tools.meraid-view.description'),
+  name: translate('tools.mermaid-view.title'),
+  path: '/mermaid-view',
+  description: translate('tools.mermaid-view.description'),
   keywords: ['add', 'comma', 'quotation', 'mark'],
   component: () => import('./mermaid-view.vue'),
   icon: ArrowsShuffle,
