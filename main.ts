@@ -1,33 +1,21 @@
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import { createHead } from '@vueuse/head';
-
-import { registerSW } from 'virtual:pwa-register';
-import shadow from 'vue-shadow-dom';
-import ContextMenu from '@imengyu/vue3-context-menu';
-import { plausible } from './plugins/plausible.plugin';
-
-import 'virtual:uno.css';
-
-import { naive } from './plugins/naive.plugin';
-
-import App from './App.vue';
-import router from './router';
-import { i18nPlugin } from './plugins/i18n.plugin';
-
-import '@imengyu/vue3-context-menu/lib/vue3-context-menu.css';
-
-registerSW();
-
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(createHead());
-app.use(i18nPlugin);
-app.use(router);
-app.use(naive);
-app.use(plausible);
-app.use(shadow);
-app.use(ContextMenu);
-
-app.mount('#app');
+<plugin>
+    <groupId>io.openliberty.tools</groupId>
+<artifactId>liberty-maven-plugin</artifactId>
+<version>3.12.0</version>
+<configuration>
+<installDirectory>D:/wlp-space/wlp23</installDirectory>
+<serverName>defaultServer</serverName>
+<jvmOptions>
+<param>-Dfile.encoding=UTF-8</param>
+<param>-Dsun.jnu.encoding=UTF-8</param>
+    </jvmOptions>
+    <!-- 热加载配置 -->
+    <hotTests>false</hotTests>
+    <skipTests>true</skipTests>
+    <stripVersion>false</stripVersion>
+    <!-- 关键：启用松散应用 -->
+    <looseApplication>true</looseApplication>
+    <!-- 启用依赖模块的热编译 -->
+    <recompileDependencies>true</recompileDependencies>
+    </configuration>
+    </plugin>
